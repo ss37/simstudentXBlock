@@ -1,4 +1,4 @@
-"""Setup for SimStudent XBlock."""
+"""Setup for pdf XBlock."""
 
 import os
 from setuptools import setup
@@ -19,7 +19,7 @@ setup(
     version='0.1',
     description='simstudent XBlock',   # TODO: write a better description.
     packages=[
-        'simstudent',
+        'pdf',
     ],
     install_requires=[
         'XBlock',
