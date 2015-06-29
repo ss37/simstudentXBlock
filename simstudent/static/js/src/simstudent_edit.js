@@ -1,5 +1,5 @@
-/* Javascript for pdfXBlock. */
-function pdfXBlock(runtime, element) {
+/* Javascript for simstudentXBlock. */
+function simstudentXBlock(runtime, element) {
 
     function paellaSaved(result) {
         $('.server', element).text();
@@ -19,7 +19,7 @@ function pdfXBlock(runtime, element) {
 
         $('.xblock-editor-error-message', element).html();
         $('.xblock-editor-error-message', element).css('display', 'none');
-        var handlerUrl = runtime.handlerUrl(element, 'save_pdf');
+        var handlerUrl = runtime.handlerUrl(element, 'save_simstudent');
         $.post(handlerUrl, JSON.stringify(data)).done(function(response) {
             if (response.result === 'success') {
                 window.location.reload(false);
