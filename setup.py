@@ -19,7 +19,7 @@ setup(
     version='0.1',
     description='simstudent XBlock',   # TODO: write a better description.
     packages=[
-        'pdf',
+        'simstudent',
     ],
     install_requires=[
         'XBlock',
