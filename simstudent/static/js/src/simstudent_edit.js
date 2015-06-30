@@ -34,7 +34,7 @@ function simstudentXBlock(runtime, element) {
         var script = document.createElement('script');
         script.type = "text/javascript";
         script.src = "https://apis.google.com/js/api.js?onload=loadPicker";
-        $('.settings-list').append(script);
+        $('#settings-tab').append(script);
     })
 
     $(function ($) {
