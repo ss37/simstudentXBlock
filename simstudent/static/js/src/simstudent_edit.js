@@ -31,12 +31,13 @@ function simstudentXBlock(runtime, element) {
     });
 
     $(element).find('#drive-button').bind('click', function() {
-        var script = document.createElement('script');
-        script.type = "text/javascript";
-        script.src = "https://apis.google.com/js/api.js?onload=loadPicker";
-        $('#settings-tab').append(script);
+        $.getScript("https://apis.google.com/js/api.js?onload=loadPicker");
     })
-
+    
+    $(function loadPicker() {
+        runtime.notify('cancel', {});
+    })
+    
     $(function ($) {
         /* Here's where you'd do things on page load. */
     });
