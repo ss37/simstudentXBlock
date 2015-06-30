@@ -32,48 +32,11 @@ function simstudentXBlock(runtime, element) {
 
     $(element).find('#drive-button').bind('click', function() {
         $.getScript("https://apis.google.com/js/api.js?onload=loadPicker");
-        runtime.notify('cancel', {});
     });
-    
-    // The Browser API key obtained from the Google Developers Console.
-    // Replace with your own Browser API key, or your own key.
-    var developerKey = 'AIzaSyCpW0K0tbhfvJmMrPw1rsFsyhH6QFJDRA8';
-
-    // The Client ID obtained from the Google Developers Console. Replace with your own Client ID.
-    var clientId = "870410046401-p2s67o18c1npgi8ebbppqsi03237a5bn.apps.googleusercontent.com";
-
-    // Replace with your own App ID. (Its the first number in your Client ID)
-    var appId = "870410046401";
-
-    // Scope to use to access user's Drive items.
-    var scope = ['https://www.googleapis.com/auth/drive'];
-
-    var pickerApiLoaded = false;
-    var oauthToken;
     
     $(function loadPicker() {
-        gapi.load('auth', {'callback': onAuthApiLoad});
-        gapi.load('picker', {'callback': onPickerApiLoad});
+        runtime.notify('cancel', {});
     });
-
-    function onAuthApiLoad() {
-      window.gapi.auth.authorize(
-          {
-            'client_id': clientId,
-            'scope': scope,
-            'immediate': false
-          },
-          handleAuthResult);
-    }
-
-    function onPickerApiLoad() {
-
-    }
-
-    function handleAuthResult(authResult) {
-      
-      }
-    }
     
     $(function ($) {
         /* Here's where you'd do things on page load. */
