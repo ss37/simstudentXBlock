@@ -31,11 +31,10 @@ function simstudentXBlock(runtime, element) {
     });
 
     $(element).find('#drive-button').bind('click', function() {
-        console.log("in drive button handler");
+        runtime.notify('cancel', {});
     });
     
     $(function loadPicker() {
-        console.log("in loadPicker");
         runtime.notify('cancel', {});
     });
     
