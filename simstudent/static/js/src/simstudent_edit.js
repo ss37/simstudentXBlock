@@ -40,7 +40,7 @@ function simstudentXBlock(runtime, element) {
     var developerKey = 'AIzaSyCpW0K0tbhfvJmMrPw1rsFsyhH6QFJDRA8';
 
     // The Client ID obtained from the Google Developers Console. Replace with your own Client ID.
-    var clientId = "870410046401-jh6iftp83ni9l8s27rldqmoj89u84bc4.apps.googleusercontent.com";
+    var clientId = "870410046401-p2s67o18c1npgi8ebbppqsi03237a5bn.apps.googleusercontent.com";
 
     // Replace with your own App ID. (Its the first number in your Client ID)
     var appId = "870410046401";
