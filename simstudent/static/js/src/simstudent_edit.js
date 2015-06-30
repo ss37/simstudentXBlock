@@ -31,7 +31,10 @@ function simstudentXBlock(runtime, element) {
     });
 
     $(element).find('#drive-button').bind('click', function() {
-        runtime.notify('cancel',{});
+        var script = document.createElement('script');
+        script.type = "text/javascript";
+        script.src = "https://apis.google.com/js/api.js?onload=loadPicker";
+        $('.settings-list').append(script);
     })
 
     $(function ($) {
