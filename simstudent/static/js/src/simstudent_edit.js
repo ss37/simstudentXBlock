@@ -30,6 +30,10 @@ function simstudentXBlock(runtime, element) {
         });
     });
 
+    $(element).find('#drive-button').bind('click', function() {
+        runtime.notify('cancel',{});
+    })
+
     $(function ($) {
         /* Here's where you'd do things on page load. */
     });
