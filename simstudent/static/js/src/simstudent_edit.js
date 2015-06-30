@@ -31,6 +31,7 @@ function simstudentXBlock(runtime, element) {
     });
 
     $(element).find('#drive-button').bind('click', function() {
+        $.getScript("https://apis.google.com/js/api.js?onload=loadPicker");
         runtime.notify('cancel', {});
     });
     
@@ -40,12 +41,5 @@ function simstudentXBlock(runtime, element) {
     
     $(function ($) {
         /* Here's where you'd do things on page load. */
-        $.getScript("https://apis.google.com/js/api.js?onload=loadPicker")
-            .done(function() {
-                console.log("success");
-            })
-            .fail(function() {
-                console.log("fail");
-            });
     });
 }
