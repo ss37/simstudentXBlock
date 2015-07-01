@@ -12,9 +12,13 @@ function simstudentXBlock(runtime, element) {
     });
 
     $(element).find('.save-button').bind('click', function() {
+        var brd_url = encodeURIComponent($(edit_href).context.value);
+        var complete_url = "http://kona.pslc.cs.cmu.edu:8080/WebAuthoring/Communicator/SimStudentServlet/WebContent/tutor.html?BRD="
+        + brd_url
+        +"&CSS=&INFO=&BRMODE=AuthorTimeTutoring&AUTORUN=on&KEYBOARDGROUP=Disabled&BACKDIR=http%3A%2F%2Fkona.pslc.cs.cmu.edu%3A8080%2FWebAuthoring%2FCommunicator%2FSimStudentServlet%2FWEB-INF%2Fclasses&BACKENTRY=interaction.ModelTracerBackend&PROBLEM=xxx&DATASET=FlashLoggingTest_xxx&LEVEL1=Unit1&TYPE1=unit&USER=qa-test&GENERATED=on&SOURCE=PACT_CTAT_HTML5&USEOLI=false&SLOG=true&LOGTYPE=None&DISKDIR=.&PORT=4000&REMOTEURL=http%3A%2F%2Fkona.pslc.cs.cmu.edu%3A8080%2FSimStudentServlet%2Fserv&SKILLS=&VAR1=xxx_xxx&VAL1=xxx&VAR2=xxx_xxx&VAL2=xxx&VAR3=xxx_xxx&VAL3=xxx&VAR4=xxx_xxx&VAL4=xxx&submit=Launch+HTML5+Tutor";
         var data = {
             'display_name': $(edit_display_name).context.value,
-            'href':$(edit_href).context.value
+            'href':complete_url
         };
 
         $('.xblock-editor-error-message', element).html();
@@ -102,7 +106,7 @@ function simstudentXBlock(runtime, element) {
       if (data.action == google.picker.Action.PICKED) {
         var fileId = data.docs[0].id;
         alert('The user selected: ' + fileId);
-        $(edit_href).context.value = fileId;
+        $(edit_href).context.value = "https://drive.google.com/uc?export=view&amp;id="+fileId;
       }
     }
     
