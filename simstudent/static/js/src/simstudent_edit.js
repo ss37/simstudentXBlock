@@ -34,8 +34,8 @@ function simstudentXBlock(runtime, element) {
         $.getScript("https://apis.google.com/js/api.js?onload=loadPicker");
     });
     
-    var loadPicker = function() {
-        this.runtime.notify('cancel', {});
+    window.loadPicker = function() {
+        runtime.notify('cancel', {});
     };
     
     $(function ($) {
