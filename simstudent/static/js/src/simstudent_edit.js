@@ -102,6 +102,7 @@ function simstudentXBlock(runtime, element) {
       if (data.action == google.picker.Action.PICKED) {
         var fileId = data.docs[0].id;
         alert('The user selected: ' + fileId);
+        $(edit_href).context.value = fileId;
       }
     }
     
