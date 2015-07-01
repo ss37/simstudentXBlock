@@ -86,7 +86,7 @@ function simstudentXBlock(runtime, element) {
     window.createPicker = function() {
       if (pickerApiLoaded && oauthToken) {
         var view = new google.picker.View(google.picker.ViewId.DOCS);
-        view.setMimeTypes("text/plain");
+        //view.setMimeTypes("text/plain");
         var picker = new google.picker.PickerBuilder()
             .enableFeature(google.picker.Feature.NAV_HIDDEN)
             .enableFeature(google.picker.Feature.MULTISELECT_ENABLED)
